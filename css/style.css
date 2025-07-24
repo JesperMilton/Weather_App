@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Play:wght@400;700&display=swap');
+
+
+:root {
+  --background: #4f959d;
+  --secondary-background: #205781;
+  --text-color: #f9f9f9;
+  --color: #1b3a3d;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  color: var(--text-color);
+  font-family: "Play", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-size: 0.95rem;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: var(--background);
+  display: flex;
+  flex-direction: column;
+  overscroll-behavior-y: auto;
+}
+
+#weather-container {
+  background-color: var(--background);
+  background-image: url(../svg/utils/HeaderBackground.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center bottom;
+  width: 100vw;
+  height: 40vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 15px;
+}
+
+#container {
+  padding: 30px;
+  padding-top: 80px;
+  flex: 1;
+  overflow-y: auto;
+  background: url(../svg/utils/background.png);
+  background-size: cover;
+  position: relative;
+}
+
+#quakingDuck {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70px; 
+  height: 70px; 
+}
+
+#weather-container img {
+  width: 150px;
+  height: 150px;
+}
+
+#locationIcon {
+  height: 26px;
+  width: 26px;
+}
+
+.icon {
+  width: 48px;
+  height: 48px;
+}
+
+.pull-to-refresh {
+  position: fixed;
+  top: -110px;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: top 0.7s ease-in-out;
+  background-color: var(--text-color);
+}
+.pull-to-refresh.visible {
+  top: 0;
+}
+
+
+#loading {
+  width: 80px;
+  height: 80px;
+
+}
+
+.stats-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 10px;
+}
+
+#wind, #humidity {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 5px 15px;
+  font-size: 2rem;
+}
+
+#content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+#content-container h1, 
+#content-container h2, 
+#content-container p {
+  margin: 5px 0;
+  width: 100%;
+  text-align: center;
+}
